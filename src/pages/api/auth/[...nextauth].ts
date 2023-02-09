@@ -46,9 +46,9 @@ const auth: NextApiHandler = async (req, res) => {
   ];
 
   const isDefaultSigninPage =
-    req.method === "GET" && req.query.nextauth.includes("signin");
+    req.method === "GET" && req.query.nextauth?.includes("signin");
 
-  // Hide Sign-In with Ethereum from default sign page
+  // Hide Sign-In with Stacks from default sign page
   if (isDefaultSigninPage) {
     providers.pop();
   }
@@ -62,7 +62,7 @@ const auth: NextApiHandler = async (req, res) => {
     secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
       async session({ session, token }) {
-        session.address = token.sub;
+        session.address = token.sub!;
         return session;
       },
     },
