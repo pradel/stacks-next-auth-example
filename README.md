@@ -1,7 +1,5 @@
 # Sign-In with Stacks and NextAuth.js Example
 
-An example of Sign-In with Stacks and NextAuth.js. Inspired by the [Sign-In with Ethereum Example](https://github.com/spruceid/siwe-next-auth-example).
+> Example moved to https://github.com/pradel/sign-in-with-stacks/tree/main/examples/next-auth
 
-## License
-
-MIT
+An example of Sign-In with Stacks and NextAuth.js.
